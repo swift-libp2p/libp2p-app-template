@@ -4,7 +4,7 @@
 
 ### How to use
 1. Clone this repo
-    1. Click the ```Use This Template``` button on GitHub 
+    1. Click the ["Use This Template"](https://github.com/swift-libp2p/libp2p-app-template/generate) button on GitHub 
     2. or Clone this repo via cli
 ``` bash
 git clone https://github.com/swift-libp2p/libp2p-app-template.git
