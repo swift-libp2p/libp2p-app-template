@@ -17,7 +17,7 @@ func routes(_ app: Application) throws {
         /// - In this case we define our version to be `1.0.0`
         /// - Also, we know all inbound and outbound data should be delimited with a new-line character so we can install the `.newLineDelimited` channel handler.
         /// - The route is handled by a closure that accepts a `Request` and returns any `ResponseEncodable` object, a `String` in this case.
-        echo.on("1.0.0", handlers: [.newLineDelimited]) { req -> ResponseType<String> in
+        echo.on("1.0.0", handlers: [.newLineDelimited]) { req -> Response<String> in
             
             /// Make sure we only handle inbound streams (libp2p can pass outbound stream to this same handler if you'd like to reuse code)
             guard req.streamDirection == .inbound else { return .close }
