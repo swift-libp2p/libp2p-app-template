@@ -4,7 +4,10 @@
 /*.xcodeproj
 xcuserdata/
 DerivedData/
+.swiftpm
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+.keys/
+.env*
 Package.resolved
