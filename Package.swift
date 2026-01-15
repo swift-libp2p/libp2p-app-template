@@ -20,20 +20,23 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
+        .executableTarget(
             name: "App",
             dependencies: [
                 .product(name: "LibP2P", package: "swift-libp2p"),
                 .product(name: "LibP2PNoise", package: "swift-libp2p-noise"),
-                .product(name: "LibP2PMPLEX", package: "swift-libp2p-mplex"),
-            ]),
-        .executableTarget(
-            name: "Run",
-            dependencies: [.target(name: "App")]),
+                .product(name: "LibP2PYAMUX", package: "swift-libp2p-yamux"),
+            ],
+            swiftSettings: swiftSettings),
         .testTarget(
             name: "AppTests",
             dependencies: [
                 .target(name: "App")
-            ]),
+            ],
+            swiftSettings: swiftSettings),
     ]
 )
+
+var swiftSettings: [SwiftSetting] { [
+    .enableUpcomingFeature("ExistentialAny"),
+] }
