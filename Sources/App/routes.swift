@@ -1,10 +1,3 @@
-//
-//  routes.swift
-//  
-//
-//  Created by Brandon Toms on 5/2/22.
-//
-
 import LibP2P
 
 /// Route Handlers
