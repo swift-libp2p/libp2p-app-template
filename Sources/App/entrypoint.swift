@@ -14,8 +14,8 @@ enum Entrypoint {
 
         // Create a persistent PeerID
         let peerID: KeyPairFile = .persistent(
-            // Specify the PeerIDs key type (RSA, SecP256K1 or Ed25519)
-            type: .RSA(bits: .B2048),
+            // Specify the PeerIDs key type (RSA, Secp256k1 or Ed25519)
+            type: .Ed25519,
             // The password used to encrypt our PeerID on disk should be stored in the appropriate .env file in our projects root directory
             encryptedWith: .envKey,
             // The encrypted keys will be stored in the following directory within our projects root dir
