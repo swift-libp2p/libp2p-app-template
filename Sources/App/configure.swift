@@ -29,6 +29,12 @@ public func configure(_ app: Application) async throws {
     }
 }
 
+/// An example of a custom command you can add to your app
+///
+/// Execute the `cowsay` cmd by running
+/// ```
+/// swift run App cowsay "Mmooo" --eyes "👀" --tongue "👅"
+/// ```
 struct Cowsay: AsyncCommand {
     struct Signature: CommandSignature {
         @Argument(name: "message")
