@@ -1,3 +1,4 @@
+import LibP2P
 %%IMPORT%%
 
 // configures your application
